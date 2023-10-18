@@ -1,5 +1,8 @@
 package seedu.address.logic.parser.appointmentparser;
 
+import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_ID;
+
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.appointmentcommands.CancelCommand;
 import seedu.address.logic.parser.ArgumentMultimap;
@@ -8,8 +11,7 @@ import seedu.address.logic.parser.Parser;
 import seedu.address.logic.parser.ParserUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
 
-import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_ID;
+
 
 /**
  * Parses input arguments and creates a new CancelCommand object

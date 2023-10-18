@@ -1,5 +1,11 @@
 package seedu.address.logic.commands.appointmentcommands;
 
+import static java.util.Objects.requireNonNull;
+import static seedu.address.logic.commands.appointmentcommands.RescheduleCommand.MESSAGE_NO_APPOINTMENT_FOUND;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_ID;
+
+import java.util.List;
+
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.logic.Messages;
@@ -11,20 +17,14 @@ import seedu.address.model.Model;
 import seedu.address.model.appointment.Appointment;
 
 
-import java.util.List;
-
-import static java.util.Objects.requireNonNull;
-import static seedu.address.logic.commands.appointmentcommands.RescheduleCommand.MESSAGE_NO_APPOINTMENT_FOUND;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_ID;
-
 /**
  * CancelCommand class to cancel an existing appointment.
  */
 public class CancelCommand extends Command {
 
     public static final String COMMAND_WORD = "cancel";
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Cancels the appointment with the corresponding" +
-            " appointment ID\n"
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Cancels the appointment with the corresponding"
+            + " appointment ID\n"
             + "Parameters: "
             + PREFIX_ID + "ID \n"
             + "Example: " + COMMAND_WORD + " " + PREFIX_ID + "2";
@@ -33,6 +33,10 @@ public class CancelCommand extends Command {
 
     private final Index index;
 
+    /**
+     * Constructor for the CancelCommand class
+     * @param index
+     */
     public CancelCommand(Index index) {
         requireNonNull(index);
         this.index = index;
