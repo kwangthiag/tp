@@ -13,6 +13,7 @@ import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.ExitCommand;
 import seedu.address.logic.commands.HelpCommand;
 import seedu.address.logic.commands.appointmentcommands.AddAppointmentCommand;
+import seedu.address.logic.commands.appointmentcommands.CancelCommand;
 import seedu.address.logic.commands.appointmentcommands.RescheduleCommand;
 import seedu.address.logic.commands.personcommands.AddCommand;
 import seedu.address.logic.commands.personcommands.DeleteCommand;
@@ -20,6 +21,7 @@ import seedu.address.logic.commands.personcommands.EditCommand;
 import seedu.address.logic.commands.personcommands.FindCommand;
 import seedu.address.logic.commands.personcommands.ListCommand;
 import seedu.address.logic.parser.appointmentparser.AddAppointmentCommandParser;
+import seedu.address.logic.parser.appointmentparser.CancelCommandParser;
 import seedu.address.logic.parser.appointmentparser.RescheduleCommandParser;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.logic.parser.personparser.AddCommandParser;
@@ -91,9 +93,12 @@ public class AddressBookParser {
         case RescheduleCommand.COMMAND_WORD:
             return new RescheduleCommandParser().parse(arguments);
 
+        case CancelCommand.COMMAND_WORD:
+            return new CancelCommandParser().parse(arguments);
+
         default:
-            logger.finer("This user input caused a ParseException: " + userInput);
-            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
+        logger.finer("This user input caused a ParseException: " + userInput);
+        throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
         }
     }
 
