@@ -1,5 +1,9 @@
 package seedu.address.logic.commands.appointmentcommands;
 
+import static seedu.address.logic.parser.CliSyntax.PREFIX_APPOINTMENT_END;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_APPOINTMENT_PATIENT;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_APPOINTMENT_START;
+
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -36,7 +40,23 @@ public class AppointmentCommandTestUtil {
 
     public static final String VALID_END_TWO = "2023/09/03 11:00";
 
-    public static final String VALID_DESCRIPTION = "Follow Up Blood Test";
+    public static final String VALID_DESCRIPTION_ONE = "Follow Up Blood Test";
+    public static final String VALID_DESCRIPTION_TWO = "Routine Checkup";
+
+    public static final String VALID_PATIENT_ONE = "0";
+
+    public static final String VALID_PATIENT_TWO = "1";
+
+    public static final String START_DESC_ONE = " " + PREFIX_APPOINTMENT_START + VALID_START_ONE;
+
+    public static final String START_DESC_TWO = " " + PREFIX_APPOINTMENT_START + VALID_START_TWO;
+
+    public static final String END_DESC_ONE = " " + PREFIX_APPOINTMENT_END + VALID_END_ONE;
+
+    public static final String END_DESC_TWO = " " + PREFIX_APPOINTMENT_END + VALID_END_TWO;
+
+    public static final String PATIENT_DESC_ONE = " " + PREFIX_APPOINTMENT_PATIENT + VALID_END_TWO;
+
+    public static final String PATIENT_DESC_TWO = " " + PREFIX_APPOINTMENT_PATIENT + VALID_END_TWO;
+
 }
-
-

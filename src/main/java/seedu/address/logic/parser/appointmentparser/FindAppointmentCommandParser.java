@@ -15,7 +15,7 @@ import seedu.address.model.appointment.appointmentfilters.FindPatientFilter;
  * This class is responsible for taking a user's input string and converting it into
  * a corresponding command for finding patient appointments based on provided keywords.
  */
-public class FindPatientAppointmentCommandParser implements Parser<FindAppointmentCommand> {
+public class FindAppointmentCommandParser implements Parser<FindAppointmentCommand> {
     /**
      * Parses {@code userInput} and returns a FindPatientAppointmentCommand object to be executed.
      *

@@ -16,6 +16,9 @@ public class TodayCommand extends Command {
 
     public static final String MESSAGE_SUCCESS = "Listed all appointments occurring today";
 
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Lists all appointments occurring today\n"
+            + "Example: " + COMMAND_WORD;
+
     @Override
     public CommandResult execute(Model model) {
         requireNonNull(model);

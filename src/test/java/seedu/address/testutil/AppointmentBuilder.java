@@ -1,6 +1,6 @@
 package seedu.address.testutil;
 
-import static seedu.address.logic.commands.appointmentcommands.AppointmentCommandTestUtil.VALID_DESCRIPTION;
+import static seedu.address.logic.commands.appointmentcommands.AppointmentCommandTestUtil.VALID_DESCRIPTION_ONE;
 
 import seedu.address.model.appointment.Appointment;
 import seedu.address.model.appointment.AppointmentDescription;
@@ -16,13 +16,16 @@ public class AppointmentBuilder {
 
     private static final AppointmentTime DEFAULT_TIME = new AppointmentTimeBuilder().build();
     private static final Person DEFAULT_PATIENT = new PersonBuilder().build();
-    private static final String DEFAULT_DESCRIPTION = VALID_DESCRIPTION;
+    private static final String DEFAULT_PATIENT_STRING = DEFAULT_PATIENT.getName().fullName;
+    private static final String DEFAULT_DESCRIPTION = VALID_DESCRIPTION_ONE;
 
 
     // Identity fields
     private AppointmentTime appointmentTime;
     private Person patient;
+
     private PriorityTag priorityTag;
+
     private AppointmentDescription appointmentDescription;
     /**
      * Creates a {@code AppointmentBuilder} with default settings.
@@ -62,7 +65,6 @@ public class AppointmentBuilder {
         this.patient = patient;
         return this;
     }
-
 
     /**
      * Sets the {@code Description} for the Appointment being built.

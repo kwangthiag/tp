@@ -12,6 +12,11 @@ public class ClearCommand extends Command {
 
     public static final String COMMAND_WORD = "clear";
     public static final String MESSAGE_SUCCESS = "Patient records has been cleared!";
+    /**
+     * The usage syntax and examples for the clear command.
+     */
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Clears Patient and Appointment lists.\n"
+            + "Example: " + COMMAND_WORD;
 
 
     @Override

@@ -16,6 +16,9 @@ public class UpcomingCommand extends Command {
 
     public static final String MESSAGE_SUCCESS = "Listed all upcoming appointments";
 
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Lists all upcoming appointments.\n"
+            + "Example: " + COMMAND_WORD;
+
     @Override
     public CommandResult execute(Model model) {
         requireNonNull(model);

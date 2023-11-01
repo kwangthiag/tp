@@ -15,6 +15,12 @@ public class ListCommand extends Command {
 
     public static final String MESSAGE_SUCCESS = "Listed all patients and appointments";
 
+    /**
+     * The usage syntax and examples for the list command.
+     */
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Lists all patients and appointments.\n"
+            + "Example: " + COMMAND_WORD;
+
 
     @Override
     public CommandResult execute(Model model) {
